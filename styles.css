@@ -1,0 +1,109 @@
+/* Reset e estilos globais */
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header img {
+    max-width: 200px;
+}
+
+/* Menu de heróis */
+.heroes-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 20px 60px;
+    margin: 10;
+    background-color: #101010;
+    border-radius: 15px 0px 15px 0px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 120px;
+    white-space: nowrap;
+    color: white;
+}
+
+.hero-title:hover {
+    background-color: #e62429;
+    transform: scale(1.05);
+}
+
+.hero-title.active {
+    background-color: #e62429;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(230, 36, 41, 0.7);
+}
+
+/* Conteúdo dos heróis */
+.hero-content {
+    display: none;
+    padding: 20px;
+}
+
+.hero-content.active {
+    display: block;
+}
+
+.hero-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e62429;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e62429;
+    padding-bottom: 10px;
+}
+
+.clearfix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 8px;
+    justify-self: center;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .clearfix {
+        grid-template-columns: 1fr;
+    }
+    
+    .heroes-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-title {
+        width: 100%;
+    }
+}
